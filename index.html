@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <title>Weeny | URL Shortner</title>
+    <style>
+      .card {
+        padding: 10px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+
+      .formclass {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container h-100 d-flex justify-content-center">
+      <div class="row card justify-content-center">
+        <div class="row">
+          <h1 class="display-1">Weeny - URL Shortner</h1>
+        </div>
+        <form class="formclass">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="text"
+                class="form-control"
+                id="longUrl"
+                placeholder="Enter URL to be shortened"
+              />
+            </div>
+            <button onclick="shorten()" class="col btn btn-primary">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    console.log("hi");
+    function shorten() {
+      url = document.getElementById("longUrl");
+      var i = 0;
+      for (i = 0; i < 1000; i++) {
+        console.log("higher");
+        console.log(url);
+        console.log(url.innerHTML);
+      }
+
+      setInterval((url) => {
+        console.log(url);
+      }, 2000);
+    }
+  </script>
+</html>
