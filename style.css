@@ -1,4 +1,4 @@
-.card {
+.row {
   padding: 10px;
 }
 html,
@@ -7,5 +7,13 @@ body {
 }
 
 .formclass {
+  padding: 10px;
+}
+
+#slugExists {
+  display: none;
+}
+
+#shorturltext {
   padding: 10px;
 }
