@@ -1,4 +1,4 @@
-serverURL = "http://localhost:8000/";
+serverURL = "https://weeny-backend.herokuapp.com/";
 
 async function postData(url = "", data = {}) {
   const response = await fetch(url, {
