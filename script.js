@@ -31,7 +31,7 @@ shorten = (e) => {
   var url = document.getElementById("longUrl");
   var longurl = url.value;
   var slug = document.getElementById("slug").value;
-  postData("http://localhost:8000/addlink", {
+  postData(serverURL + "addlink", {
     longURL: longurl,
     slug: slug,
   }).then((data) => {
@@ -56,7 +56,7 @@ checkSlug = (e, throughSubmit = 0) => {
   slugWarning.style.display = "none";
   var slug = document.getElementById("slug").value;
 
-  getData("http://localhost:8000/slug/" + slug).then((data) => {
+  getData(serverURL + "slug/" + slug).then((data) => {
     if (data.slug) {
       slugWarning.innerHTML =
         "That slug already exists :( Please choose another one.";
