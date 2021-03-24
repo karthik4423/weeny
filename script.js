@@ -21,6 +21,16 @@ async function getData(url = "") {
   return response.json();
 }
 
+validateURL = (url) => {
+  if (url.startsWith("https://") || url.startsWith("http://")) {
+    return url;
+  }
+  if (url.startsWith("www")) {
+    return "http://" + url;
+  }
+  return "http://www." + url;
+};
+
 shorten = (e) => {
   e.preventDefault();
   shortUrlText = document.getElementById("shorturltext");
@@ -29,7 +39,8 @@ shorten = (e) => {
     return;
   }
   var url = document.getElementById("longUrl");
-  var longurl = url.value;
+  var longurl = validateURL(url.value);
+  console.log(longurl);
   var slug = document.getElementById("slug").value;
   postData(serverURL + "addlink", {
     longURL: longurl,
