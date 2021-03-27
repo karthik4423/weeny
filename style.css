@@ -17,3 +17,7 @@ body {
 #shorturltext {
   padding: 10px;
 }
+
+#slug {
+  display: none;
+}
