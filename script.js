@@ -1,4 +1,4 @@
-serverURL = "http://www.weeny.ml/";
+serverURL = "https://www.weeny.ml/";
 
 async function postData(url = "", data = {}) {
   const response = await fetch(url, {
